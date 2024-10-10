@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
+  const [isVisible, setIsVisible] = useState(true);
+
+  const handleClick = () => {
+    setIsVisible(!isVisible);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="text-container">
+      <p className={`text ${isVisible ? 'visible' : 'hidden'}`}>
+        Привет, это сообщение передано через пропс!
+      </p>
+      <button className="neon-button" onClick={handleClick}>
+        {isVisible ? 'Скрыть текст' : 'Показать текст'}
+      </button>
     </div>
   );
 }
