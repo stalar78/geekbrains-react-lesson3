@@ -166,3 +166,33 @@ p {
     opacity: 1;
   }
 }
+
+.input-message {
+  background-color: black;
+  /* Черный фон */
+  border: 2px solid #00ff00;
+  /* Неоновая зелёная граница */
+  color: #00ff00;
+  /* Цвет текста: неоновый зелёный */
+  padding: 10px;
+  font-size: 16px;
+  outline: none;
+  /* Убираем стандартный outline */
+  box-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
+  /* Неоновое свечение */
+  border-radius: 5px;
+  /* Радиус границ */
+  transition: all 0.3s ease;
+  /* Плавные переходы */
+}
+
+.input-message:focus {
+  box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+  /* Усиленное свечение при фокусе */
+}
+
+.input-message::placeholder {
+  color: #00ff00;
+  /* Цвет для текста placeholder */
+  opacity: 0.7;
+}
